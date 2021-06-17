@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Fredoka One', 'Roboto', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #121214;
+}
+
+#gameBoard {
+  max-width: 43.75rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+#gameBoard .card {
+  width: 9.3rem;
+  height: 9.3rem;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+#gameBoard .card-back,
+#gameBoard .card-front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1.2rem;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+#gameBoard .flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+#gameBoard .card-front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-color: #252525;
+}
+
+#gameBoard .card-back {
+  color: #161616;
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+#gamerOver {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+#restart {
+  margin-top: 3rem;
+  padding: 1.2rem;
+  font-size: 1.2rem;
+  background-color: #ff610095;
+  border: none;
+  border: 1px solid #ff6100;
+  border-radius: .8rem;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
