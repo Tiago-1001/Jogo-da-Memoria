@@ -78,7 +78,7 @@ body {
 #gameBoard .card-back {
   color: #161616;
   background-color: #FFE53B;
-  background-image: linear-gradient(130deg, #FF2525 0%, #FFE53B 95%);
+  background-image: linear-gradient(130deg, #ffe53b 15%, #6100ff 75%);
   cursor: pointer;
   font-size: 1.8rem;
 }
