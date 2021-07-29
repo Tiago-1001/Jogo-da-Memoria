@@ -55,7 +55,7 @@ body {
 }
 
 #gamerOver {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -72,10 +72,15 @@ body {
   margin-top: 3rem;
   padding: 1.2rem;
   font-size: 1.2rem;
-  background-color: #ff610095;
+  background-color: #892ae2c4;
   border: none;
-  border: 1px solid #ff6100;
+  border: 1px solid #6317a9;
   border-radius: 0.8rem;
   color: #fff;
   cursor: pointer;
+}
+#restart:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #8a2be8;
+  border: 1px solid #f4f4f4;
 }/*# sourceMappingURL=style.css.map */
