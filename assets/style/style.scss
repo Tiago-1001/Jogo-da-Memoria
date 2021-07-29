@@ -51,20 +51,12 @@ body {
 
     .card-front {
         transform: rotateY(180deg);
-        //background-color: #00dcff;
-        //background-color: #00faf2;
-        //background-color: #00ff06;
-        //background-color: #ff6100;
-        //background-color: #fff;
         background-color: #252525;
     }
 
     .card-back {
         color: #161616;
-        //background-color: #ff6100;
-        //background-color: #6100ff;
-        background-color: #FFE53B;
-        background-image: linear-gradient(130deg, #ffe53b 15%, #6100ff 75%);
+        background-color: #8a2be8;
 
         cursor: pointer;
 
