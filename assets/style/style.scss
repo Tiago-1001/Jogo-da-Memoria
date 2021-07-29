@@ -12,8 +12,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
     height: 100vh;
-    background-color: #121214;
+
+    background-color: $black_background;
     //background-color: rgb(210, 210, 210);
 }
 
@@ -37,12 +39,15 @@ body {
     .card-front {
         width: 100%;
         height: 100%;
+
         position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
+
         border-radius: 1.2rem;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, .45);
+
         backface-visibility: hidden;
     }
 
@@ -52,11 +57,11 @@ body {
 
     .card-front {
         transform: rotateY(180deg);
-        background-color: #252525;
+        background-color: $black;
     }
 
     .card-back {
-        color: #161616;
+        color: $black;
         background-color: $color_principal;
 
         cursor: pointer;
@@ -66,33 +71,41 @@ body {
 }
 
 #gamerOver {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: absolute;
     top: 0;
+
     width: 100%;
     height: 100%;
+
     background-color: rgba(0, 0, 0, .9);
-    color: #fff;
+
+    color: $white_text;
     font-size: 2.5rem;
 }
 
 #restart {
     margin-top: 3rem;
     padding: 1.2rem;
+
     font-size: 1.2rem;
+    color: $white_text;
+
     background-color: $background_button;
     border: none;
     border: 1px solid $purle_dark;
     border-radius: .8rem;
-    color: #fff;
+
     cursor: pointer;
 
     &:hover {
         background: rgba(255, 255, 255, .8);
+        border: 1px solid $white_text;
+
         color: #8a2be8;
-        border: 1px solid #f4f4f4;
+        
     }
 }
