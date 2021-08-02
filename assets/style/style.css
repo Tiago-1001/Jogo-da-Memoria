@@ -2,51 +2,79 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Fredoka One", "Roboto", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Fredoka One', 'Roboto', sans-serif;
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100vh;
   background-color: #121214;
 }
 
 #gameBoard {
-  max-width: 43.75rem;
+  max-width: 35.75rem;
+  display: -ms-grid;
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
   gap: 1rem;
 }
+
 #gameBoard .card {
   width: 9.3rem;
   height: 9.3rem;
   position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
+
 #gameBoard .card-back,
 #gameBoard .card-front {
   width: 100%;
   height: 100%;
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 1.2rem;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
+
 #gameBoard .flip {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
+
 #gameBoard .card-front {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   background-color: #252525;
 }
+
 #gameBoard .card-back {
   color: #252525;
   background-color: #8a2be8;
@@ -56,9 +84,16 @@ body {
 
 #gamerOver {
   display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
   top: 0;
   width: 100%;
@@ -76,11 +111,13 @@ body {
   background-color: #892ae2c4;
   border: none;
   border: 1px solid #6317a9;
-  border-radius: 0.8rem;
+  border-radius: .8rem;
   cursor: pointer;
 }
+
 #restart:hover {
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid #f4f4f4;
   color: #8a2be8;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
