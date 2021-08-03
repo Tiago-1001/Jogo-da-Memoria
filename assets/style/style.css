@@ -82,7 +82,7 @@ body {
   font-size: 1.8rem;
 }
 
-#gamerOver {
+#gameOver {
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
