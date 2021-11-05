@@ -5,25 +5,39 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Fredoka One', 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     height: 100vh;
-
+    
+    background: url(../images/background.png) no-repeat center;
+    background-size: cover;
     background-color: $black_background;
     //background-color: rgb(210, 210, 210);
 }
 
+h1 {
+    font-family: October Crow, sans-serif;
+    font-size: 4rem;
+    color: $yellow;
+    letter-spacing: 5px;
+    text-shadow: 0px 0px 8px #FF5B00;
+    word-spacing: 1rem;
+  
+    margin-bottom: 8rem;
+}
+
 #gameBoard {
-    max-width: 43.75rem;
+    max-width: 80rem;
     display: grid;
-    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
-    gap: 1rem;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1.5rem;
 
     .card {
         width: 9.3rem;
@@ -57,13 +71,16 @@ body {
 
     .card-front {
         transform: rotateY(180deg);
+        
         background-color: $black;
     }
 
     .card-back {
         color: $black;
-        background-color: $color_principal;
-
+        background: url(../images/back.png) no-repeat center;
+        background-color: $brown;
+        border: 1px solid $orange;
+        
         cursor: pointer;
 
         font-size: 1.8rem;
@@ -86,27 +103,65 @@ body {
     color: $white_text;
     font-size: 2.5rem;
 
-}
-
-#restart {
-    margin-top: 3rem;
-    padding: 1.2rem;
-
-    font-size: 1.2rem;
-    color: $white_text;
-
-    background-color: $background_button;
-    border: none;
-    border: 1px solid $purle_dark;
-    border-radius: .8rem;
-
-    cursor: pointer;
-
-    &:hover {
-        background: rgba(255, 255, 255, .8);
-        border: 1px solid $white_text;
-
-        color: #8a2be8;
+    div {
+        width: 500px;
+        height: 350px;
+        background: $black;
+        padding: 1rem;
+        border-radius: 10px;
         
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        position: relative;
+
+        img {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+
+            width: 150px;
+        }
+
+
+        h2 {
+            font-family: October Crow, sans-serif;
+            font-size: 3rem;
+            color: $yellow;
+            letter-spacing: 8px;
+            text-shadow: 0px 0px 8px #FF5B00;
+        
+            margin-bottom: 3rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: $white_text;   
+        }
+
+        #restart {
+            margin-top: 3rem;
+            width: 320px;
+            height: 40px;
+        
+            font-size: 1.2rem;
+            color: $white_text;
+        
+            background-color: $brown;
+            border: none;
+            border: 1px solid $orange;
+            border-radius: .4rem;
+        
+            cursor: pointer;
+        
+            &:hover {
+                filter: brightness(.8);
+                color: #fff;
+            }
+        }
     }
 }
+

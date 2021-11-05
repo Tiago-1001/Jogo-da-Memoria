@@ -5,16 +5,15 @@ let game = {
     secondCard: null,
 
     techs: [
-        'bootstrap',
-        'css',
-        'electron',
-        'firebase',
-        'html',
-        'javascript',
-        'jquery',
-        'mongo',
-        'node',
-        'react',
+        'straw',
+        'book',
+        'eye',
+        'plush',
+        'pumpkin',
+        'vampire',
+        'witch',
+        'zombie',
+        'ghost',
     ],
 
     setCard: function (id) {
